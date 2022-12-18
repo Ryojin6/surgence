@@ -108,27 +108,7 @@
           </AtomAnimate>
         </div>
         <div class="flex w-full justify-center py-6">
-          <a href="#" class="btn">
-            <svg width="277" height="62">
-              <defs>
-                <linearGradient id="grad1">
-                  <stop offset="0%" stop-color="#FF8282" />
-                  <stop offset="100%" stop-color="#E178ED" />
-                </linearGradient>
-              </defs>
-              <rect
-                x="5"
-                y="5"
-                rx="25"
-                fill="none"
-                stroke="url(#grad1)"
-                width="266"
-                height="50"
-              ></rect>
-            </svg>
-            <!--<span>Voir mes réalisations</span>-->
-            <span>Learn more</span>
-          </a>
+          <MoleculeButton />
         </div>
       </div>
     </AtomSection>
@@ -146,6 +126,37 @@
         </span>
       </marquee>
     </div>
+    <AtomSection tp="large" bp="large" class="">
+      <div class="mx-auto max-w-7xl">
+        <div
+          v-for="(item, index) in whatWeDo"
+          :key="item.title"
+          class="mb-16 flex flex-col items-center space-y-6 border-b-2 border-white pb-16 md:flex-row md:space-y-0 md:space-x-10 xl:space-x-20"
+        >
+          <AtomAnimate
+            class="relative flex items-center space-x-10 text-center md:w-2/3"
+          >
+            <div class="font-title font-extrabold text-a-blue shadow-2xl">
+              / {{ index + 1 }}
+            </div>
+            <div
+              class="whitespace-nowrap text-left font-title font-extrabold uppercase md:text-8xl 2xl:text-9xl"
+            >
+              {{ item.title }}
+            </div>
+          </AtomAnimate>
+          <AtomAnimate class="textSmall font-sans md:w-1/3">
+            {{ item.description }}
+          </AtomAnimate>
+        </div>
+        Our training takes you from Web3 noob to expert. We provide exclusive
+        programs run by industry leaders. Our core focus areas are: WEB3 roles,
+        Trading, Entrepreneurship
+        <div class="flex w-full justify-center py-6">
+          <MoleculeButton />
+        </div>
+      </div>
+    </AtomSection>
   </TemplateDefault>
 </template>
 
@@ -162,6 +173,41 @@ export default {
       isClicked: false,
       mounted: false,
       slogans: ['Builders', 'Traders', 'Web3 Advisor', 'Problem Solvers.'],
+      whatWeDo: [
+        {
+          title: 'Job Seeker',
+          description: `Surgence is the industry leader in securing job placements. We use our
+        deep network and advisory business to directly place community members
+        in dream roles.`,
+        },
+        {
+          title: 'LEARNERS',
+          description: `Our training takes you from Web3 noob to expert. We provide exclusive
+        programs run by industry leaders. Our core focus areas are: WEB3 roles,
+        Trading, Entrepreneurship`,
+        },
+        {
+          title: 'BUILDERS',
+          description: `Surgence helps launch your project by providing curated connections
+          , talent, and industry-specific guidance.`,
+        },
+        {
+          title: 'NETWORKERS',
+          description: `Web3 lives and dies by network effects.
+Surgence members get instant access to deep talent networks orientated around a shared vision.`,
+        },
+        {
+          title: 'Job Seeker',
+          description: `Surgence is backed by a functional business providing industry-specific
+           advisory services to brands, companies and
+projects. Click here to find out more.`,
+        },
+        {
+          title: 'TRADERS',
+          description: `Surgence runs daily trading sessions, gives members access to trading tools, 
+          and allowlist giveaways to the best projects in web3`,
+        },
+      ],
     };
   },
   mounted() {

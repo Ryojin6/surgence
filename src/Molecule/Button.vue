@@ -1,7 +1,25 @@
 <template>
-  <AtomPlainlink :to="link" class="btn">
-    {{ title }}
-  </AtomPlainlink>
+  <a href="#" class="btn">
+    <svg width="277" height="62">
+      <defs>
+        <linearGradient id="grad1">
+          <stop offset="0%" stop-color="#f14b72" />
+          <stop offset="100%" stop-color="#E178ED" />
+        </linearGradient>
+      </defs>
+      <rect
+        x="5"
+        y="5"
+        rx="25"
+        fill="none"
+        stroke="url(#grad1)"
+        width="266"
+        height="50"
+      ></rect>
+    </svg>
+    <!--<span>Voir mes réalisations</span>-->
+    <span>Learn more</span>
+  </a>
 </template>
 
 <script>
@@ -55,7 +73,7 @@ export default {
 
   background: linear-gradient(
     to right,
-    rgba(255, 130, 130, 1) 0%,
+    rgba(241, 75, 114) 0%,
     rgba(225, 120, 237, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );

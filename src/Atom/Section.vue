@@ -1,13 +1,13 @@
 <template>
   <section
-    class="z-10 flex-shrink-0"
+    class="relative z-10 flex-shrink-0"
     :class="{
       'pt-0': tp === '0',
       'pt-10': tp === 'small',
-      'pt-12 md:pt-24 xl:pt-48': tp === 'large',
+      'pt-28 md:pt-40 xl:pt-48': tp === 'large',
       'pb-0': bp === '0',
       'pb-10': bp === 'small',
-      'pb-12 md:pb-24 xl:pb-48': bp === 'large',
+      'pb-28 md:pb-40 xl:pb-48': bp === 'large',
       'px-4 xl:px-12 ': !fullWidth,
     }"
   >

@@ -140,7 +140,7 @@
               / {{ index + 1 }}
             </div>
             <div
-              class="whitespace-nowrap text-left font-title font-extrabold uppercase md:text-8xl 2xl:text-9xl"
+              class="whitespace-nowrap text-left font-title text-7xl font-extrabold uppercase lg:text-8xl 2xl:text-9xl"
             >
               {{ item.title }}
             </div>
@@ -149,9 +149,7 @@
             {{ item.description }}
           </AtomAnimate>
         </div>
-        Our training takes you from Web3 noob to expert. We provide exclusive
-        programs run by industry leaders. Our core focus areas are: WEB3 roles,
-        Trading, Entrepreneurship
+
         <div class="flex w-full justify-center py-6">
           <MoleculeButton />
         </div>

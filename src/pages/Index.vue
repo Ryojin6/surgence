@@ -28,10 +28,12 @@
       <div
         class="pin-x-center absolute bottom-4 hidden space-x-24 scrolled:opacity-0 md:flex"
       >
-        <a href="">Twitter</a>
-        <a href="">Linkedin</a>
-        <a href="">Instagram</a>
-        <a href="">Discord</a>
+        <a href="https://twitter.com/SurgenceNFT" target="_blank">Twitter</a>
+        <a href="https://www.linkedin.com/company/surgencenft/" target="_blank"
+          >Linkedin</a
+        >
+
+        <a href="https://discord.gg/surgencenft" target="_blank">Discord</a>
       </div>
     </AtomSection>
     <!-- <AtomSection bp="large" tp="large" class="relative">
@@ -254,15 +256,8 @@
         </div>
       </div>
     </AtomSection>
-    <AtomSection tp="large" bp="large" class="relative overflow-hidden">
-      <!-- <div
-        class="absolute inset-0 z-20 grid h-full w-full grid-cols-6 md:grid-cols-8 xl:grid-cols-10"
-      >
-        <div
-          class="h-32 border border-black bg-transparent opacity-5 transition-all duration-300 ease-in-out hover:border-0 hover:bg-a-charcoal hover:opacity-50"
-          v-for="i in 100"
-        />
-      </div> -->
+
+    <AtomSection class="relative overflow-hidden" tp="large" bp="large">
       <MoleculeTitle title="Advisory Services" />
       <div
         class="mx-auto flex w-full max-w-8xl flex-col flex-wrap justify-center py-10 md:flex-row"
@@ -272,7 +267,7 @@
           v-for="item in services"
           :key="item.image"
         >
-          <div class="relative z-10 w-full">
+          <div class="relative z-10 flex w-full justify-center">
             <img :src="item.image" alt="" />
           </div>
           <div class="textMedium text-a-white text-center font-title">
@@ -280,6 +275,23 @@
           </div>
         </div>
       </div>
+    </AtomSection>
+    <AtomSection class="relative text-white" tp="large">
+      <AtomInner class="">
+        <div class="relative z-10 md:w-2/3">
+          <h2 class="textXLarge font-title font-bold">
+            <a href="#" class="font-bold text-a-blue underline">APPLY HERE</a>
+            TO BECOME A MEMBER OF THE EXCLUSIVE SURGENCE COMMUNITY.
+          </h2>
+          <p class="textMedium pt-4">
+            Entry is FREE! Tell us a little about yourself, and we will handle
+            the rest. The team looks forward to seeing you in Discord
+          </p>
+        </div>
+        <div class="-bottom-10 right-0 md:absolute md:w-1/2">
+          <img src="/best.png" alt="" class="w-full opacity-50" />
+        </div>
+      </AtomInner>
     </AtomSection>
   </TemplateDefault>
 </template>

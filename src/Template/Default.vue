@@ -8,6 +8,7 @@
       <OrganismHeader />
       <div id="content" />
       <slot />
+      <OrganismFooter />
     </div>
   </div>
 </template>

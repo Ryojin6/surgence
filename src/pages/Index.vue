@@ -1,10 +1,12 @@
 <template>
-  <TemplateDefault class="overflow-x-hidden bg-white">
+  <TemplateDefault class="mx-auto max-w-8xl overflow-x-hidden bg-white">
     <div class="NoiseBackground !z-10">
       <div class="NoiseBackground__Noise" />
     </div>
     <AtomSection
-      class="relative flex h-screen items-center justify-center text-center font-mono font-bold"
+      tp="large"
+      bp="large"
+      class="relative flex h-screen max-h-[1280px] items-center justify-center text-center font-mono font-bold"
       full-width
     >
       <div class="w-full">
@@ -32,6 +34,9 @@
         <a href="">Discord</a>
       </div>
     </AtomSection>
+    <!-- <AtomSection bp="large" tp="large" class="relative">
+      <div class="relative z-10 w-full bg-white py-10">dsaads</div>
+    </AtomSection> -->
     <AtomSection bp="large" tp="large" class="relative">
       <div class="relative mx-auto max-w-5xl">
         <div class="absolute top-0 left-0 w-96 text-a-pink opacity-5">
@@ -125,11 +130,7 @@
     <AtomSection
       tp="small"
       bp="small"
-      v-aos
       class="relative transition-all duration-1000 ease-in-out"
-      aos-from="text-white bg-a-charcoal"
-      aos-to="text-a-charcoal bg-white"
-      data-aos-delay="2000"
     >
       <AtomInner class="py-32">
         <MoleculeTitle title="The Go-to Web3 Hub For" />
@@ -205,7 +206,7 @@
             </transition>
             <button
               type="button"
-              class="whitespace-nowrap text-left font-title text-7xl font-extrabold uppercase hover:text-a-blue lg:text-8xl 2xl:text-9xl"
+              class="strokeText whitespace-nowrap text-left font-title text-7xl font-extrabold uppercase hover:text-a-blue lg:text-8xl 2xl:text-9xl"
               @click="selectedPopup = 'companies'"
             >
               Companies
@@ -253,11 +254,7 @@
         </div>
       </div>
     </AtomSection>
-    <AtomSection
-      tp="large"
-      bp="large"
-      class="relative overflow-hidden bg-white"
-    >
+    <AtomSection tp="large" bp="large" class="relative overflow-hidden">
       <!-- <div
         class="absolute inset-0 z-20 grid h-full w-full grid-cols-6 md:grid-cols-8 xl:grid-cols-10"
       >
@@ -278,7 +275,7 @@
           <div class="relative z-10 w-full">
             <img :src="item.image" alt="" />
           </div>
-          <div class="textMedium text-center font-title text-a-charcoal">
+          <div class="textMedium text-a-white text-center font-title">
             {{ item.title }}
           </div>
         </div>
@@ -385,6 +382,9 @@ span.char.custom.typed {
   -webkit-text-fill-color: #1f2223; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
+}
+.strokeText:hover {
+  -webkit-text-fill-color: #fff;
 }
 .breathIn {
   box-shadow: 0px 1px 1px #f00;

@@ -22,6 +22,10 @@
           link="#"
           class="hidden w-8 hover:text-white md:block"
         />
+        <AtomIconLinkedin
+          link="#"
+          class="hidden w-8 hover:text-white md:block"
+        />
       </div>
 
       <button class="focus:outline-none block" @click="toggled = !toggled">

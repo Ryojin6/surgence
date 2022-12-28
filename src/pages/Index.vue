@@ -1,6 +1,6 @@
 <template>
   <TemplateDefault class="overflow-x-hidden bg-white">
-    <div class="NoiseBackground">
+    <div class="NoiseBackground !z-10">
       <div class="NoiseBackground__Noise" />
     </div>
     <AtomSection
@@ -112,14 +112,112 @@
         </div>
       </div>
     </AtomSection>
-    <div class="w-full pb-10 xl:pb-10">
-      <marquee
-        behavior="alternate"
-        direction="right"
-        class="flex w-full opacity-10"
-      >
+    <div class="strokeText relative z-50 w-full pb-10 xl:pb-10">
+      <marquee behavior="alternate" class="flex w-full opacity-10">
         <span
-          class="strokeText font-title text-8xl font-bold uppercase"
+          class="textXLarge font-title font-bold uppercase"
+          v-for="i in 40"
+          :key="i"
+          >. Builders . Traders . Web3 Advisor . Problem Solvers
+        </span>
+      </marquee>
+    </div>
+    <AtomSection
+      tp="small"
+      bp="small"
+      v-aos
+      class="relative transition-all duration-1000 ease-in-out"
+      aos-from="text-white bg-a-charcoal"
+      aos-to="text-a-charcoal bg-white"
+      data-aos-delay="2000"
+    >
+      <AtomInner class="py-32">
+        <MoleculeTitle title="The Go-to Web3 Hub For" />
+
+        <div
+          class="textXLarge grid w-full grid-cols-2 gap-24 py-14 text-center font-bold uppercase"
+        >
+          <div class="relative">
+            <transition name="fade">
+              <div
+                v-if="selectedPopup === 'builders'"
+                class="textSmall pin-x-center absolute w-full items-end border border-white bg-a-charcoal text-right text-white"
+              >
+                <div
+                  class="absolute -right-3 -bottom-3 h-full w-full bg-a-pink"
+                />
+
+                <div
+                  class="textLarge relative z-20 flex w-full items-center justify-between border-b border-white bg-a-charcoal px-4 font-title font-bold"
+                >
+                  <span class="w-full text-left text-a-blue">Builders</span>
+                  <button
+                    type="button"
+                    class="textLarge border-l border-white py-4 pl-4 hover:text-a-pink"
+                    @click="selectedPopup = ''"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="relative z-10 bg-a-charcoal p-4 text-left">
+                  We are an exclusive Web3 community where members gain access
+                  to talent networks, insider information, career opportunities
+                  and education. sed?
+                </div>
+              </div>
+            </transition>
+            <button
+              type="button"
+              class="strokeText whitespace-nowrap text-left font-title text-7xl font-extrabold uppercase hover:text-a-blue lg:text-8xl 2xl:text-9xl"
+              @click="selectedPopup = 'builders'"
+            >
+              Builders
+            </button>
+          </div>
+          <div class="relative">
+            <transition name="fade">
+              <div
+                v-if="selectedPopup === 'companies'"
+                class="textSmall pin-x-center absolute w-full items-end border border-white bg-a-charcoal text-right text-white"
+              >
+                <div
+                  class="absolute -right-3 -bottom-3 h-full w-full bg-a-pink"
+                />
+
+                <div
+                  class="textLarge relative z-20 flex w-full items-center justify-between border-b border-white bg-a-charcoal px-4 font-title font-bold"
+                >
+                  <span class="w-full text-left text-a-blue">Companies</span>
+                  <button
+                    type="button"
+                    class="textLarge border-l border-white py-4 pl-4 hover:text-a-pink"
+                    @click="selectedPopup = ''"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="relative z-10 bg-a-charcoal p-4 text-left">
+                  Are you planning to enter the web3 market? Our team has vetted
+                  experience bringing companies and entrepreneurs to market.
+                  Let's chat.
+                </div>
+              </div>
+            </transition>
+            <button
+              type="button"
+              class="whitespace-nowrap text-left font-title text-7xl font-extrabold uppercase hover:text-a-blue lg:text-8xl 2xl:text-9xl"
+              @click="selectedPopup = 'companies'"
+            >
+              Companies
+            </button>
+          </div>
+        </div>
+      </AtomInner>
+    </AtomSection>
+    <div class="strokeText relative z-50 w-full pt-10 xl:pt-10">
+      <marquee behavior="alternate" class="flex w-full opacity-10">
+        <span
+          class="textXLarge font-title font-bold uppercase"
           v-for="i in 40"
           :key="i"
           >. Builders . Traders . Web3 Advisor . Problem Solvers
@@ -155,6 +253,37 @@
         </div>
       </div>
     </AtomSection>
+    <AtomSection
+      tp="large"
+      bp="large"
+      class="relative overflow-hidden bg-white"
+    >
+      <!-- <div
+        class="absolute inset-0 z-20 grid h-full w-full grid-cols-6 md:grid-cols-8 xl:grid-cols-10"
+      >
+        <div
+          class="h-32 border border-black bg-transparent opacity-5 transition-all duration-300 ease-in-out hover:border-0 hover:bg-a-charcoal hover:opacity-50"
+          v-for="i in 100"
+        />
+      </div> -->
+      <MoleculeTitle title="Advisory Services" />
+      <div
+        class="mx-auto flex w-full max-w-8xl flex-col flex-wrap justify-center py-10 md:flex-row"
+      >
+        <div
+          class="flex flex-col items-center justify-center p-8 md:w-1/2 xl:w-1/4 xl:p-16"
+          v-for="item in services"
+          :key="item.image"
+        >
+          <div class="relative z-10 w-full">
+            <img :src="item.image" alt="" />
+          </div>
+          <div class="textMedium text-center font-title text-a-charcoal">
+            {{ item.title }}
+          </div>
+        </div>
+      </div>
+    </AtomSection>
   </TemplateDefault>
 </template>
 
@@ -167,10 +296,41 @@ export default {
   },
   data() {
     return {
+      selectedPopup: '',
       toggle: true,
       isClicked: false,
       mounted: false,
       slogans: ['Builders', 'Traders', 'Web3 Advisor', 'Problem Solvers.'],
+      services: [
+        {
+          image: '/1.svg',
+          title: 'Growth-Hacking',
+        },
+        {
+          image: '/2.svg',
+          title: 'Collaborations & Partnership',
+        },
+        {
+          image: '/4.svg',
+          title: 'Web3 Skilled Labour',
+        },
+        {
+          image: '/3.svg',
+          title: 'Marketing Services',
+        },
+        {
+          image: '/5.svg',
+          title: 'Industry Connections',
+        },
+        {
+          image: '/6.svg',
+          title: 'Development',
+        },
+        {
+          image: '/7.svg',
+          title: 'Discord Servers',
+        },
+      ],
       whatWeDo: [
         {
           title: 'Job Seeker',
@@ -195,7 +355,7 @@ export default {
 Surgence members get instant access to deep talent networks orientated around a shared vision.`,
         },
         {
-          title: 'Job Seeker',
+          title: 'Advisors',
           description: `Surgence is backed by a functional business providing industry-specific
            advisory services to brands, companies and
 projects. Click here to find out more.`,
@@ -236,6 +396,65 @@ span.char.custom.typed {
   }
   50% {
     box-shadow: 0px 1px 25px #f00;
+  }
+}
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #ce1b5f;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06a1c4;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06a1c4;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.15;
   }
 }
 </style>

@@ -5,7 +5,7 @@
   >
     <g-link
       to="/"
-      class="transition-all duration-300 ease-in-out scrolled:w-12 xl:w-16 2xl:w-20 2xl:scrolled:w-16"
+      class="w-16 transition-all duration-300 ease-in-out scrolled:w-12 xl:w-16 2xl:w-20 2xl:scrolled:w-16"
     >
       <g-image src="~/images/Logo2.png" immediate alt="" class="w-full" />
     </g-link>

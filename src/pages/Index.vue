@@ -68,13 +68,13 @@
       </div>
     </AtomSection>
     <AtomSection tp="large" bp="large" class="">
-      <div class="mx-auto max-w-7xl space-y-64">
+      <div class="mx-auto max-w-7xl space-y-24 md:space-y-64">
         <div
           class="flex flex-col items-center space-y-6 md:flex-row md:space-y-0 md:space-x-10 xl:space-x-20"
         >
           <AtomAnimate class="relative text-center md:w-1/3">
             <div
-              class="font-title text-[15rem] font-extrabold text-white opacity-5 shadow-2xl md:text-[18rem] 2xl:text-[25rem]"
+              class="pb-24 font-title text-[15rem] font-extrabold text-white opacity-5 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
             >
               01
             </div>
@@ -96,7 +96,7 @@
         >
           <AtomAnimate class="relative text-center md:w-1/3">
             <div
-              class="font-title text-[15rem] font-extrabold text-white opacity-5 shadow-2xl md:text-[18rem] 2xl:text-[25rem]"
+              class="pb-24 font-title text-[15rem] font-extrabold text-white opacity-5 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
             >
               02
             </div>
@@ -134,11 +134,11 @@
       bp="small"
       class="relative transition-all duration-1000 ease-in-out"
     >
-      <AtomInner class="py-32">
+      <AtomInner class="md:py-32">
         <MoleculeTitle title="The Go-to Web3 Hub For" />
 
         <div
-          class="textXLarge grid w-full grid-cols-2 gap-24 py-14 text-center font-bold uppercase"
+          class="textXLarge grid w-full gap-24 py-14 text-center font-bold uppercase md:grid-cols-2"
         >
           <div class="relative">
             <transition name="fade">
@@ -235,7 +235,7 @@
           class="mb-16 flex flex-col items-center space-y-6 border-b-2 border-white pb-16 md:flex-row md:space-y-0 md:space-x-10 xl:space-x-20"
         >
           <AtomAnimate
-            class="relative flex items-center space-x-10 text-center md:w-2/3"
+            class="relative items-center text-center md:flex md:w-2/3 md:space-x-10"
           >
             <div class="font-title font-extrabold text-a-blue shadow-2xl">
               / {{ index + 1 }}
@@ -246,7 +246,9 @@
               {{ item.title }}
             </div>
           </AtomAnimate>
-          <AtomAnimate class="textSmall font-sans md:w-1/3">
+          <AtomAnimate
+            class="textSmall text-center font-sans md:w-1/3 md:text-left"
+          >
             {{ item.description }}
           </AtomAnimate>
         </div>
@@ -267,7 +269,7 @@
           v-for="item in services"
           :key="item.image"
         >
-          <div class="relative z-10 flex w-full justify-center">
+          <div class="relative z-10 flex w-full max-w-xs justify-center">
             <img :src="item.image" alt="" />
           </div>
           <div class="textMedium text-a-white text-center font-title">

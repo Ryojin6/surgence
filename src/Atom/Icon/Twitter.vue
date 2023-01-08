@@ -2,7 +2,7 @@
   <a
     :href="link"
     target="_blank"
-    class="z-20 block w-7 text-a-blue transition-all duration-300 ease-in-out hover:text-a-pink scrolled:w-6"
+    class="z-20 block w-7 transition-all duration-300 ease-in-out scrolled:w-6"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

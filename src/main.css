@@ -90,7 +90,7 @@
 }
 
 .textSmall {
-  @apply text-base font-light;
+  @apply text-lg font-light  lg:text-xl;
 }
 
 @responsive {
@@ -138,11 +138,13 @@
   }
 }
 .hamburger-icon span {
-  @apply absolute right-0 block w-full border-t-4 border-solid border-white opacity-100;
+  @apply absolute right-0 block w-full border-t-4 border-solid border-a-charcoal opacity-100;
   transform: rotate(0deg);
   transition: all 0.3s ease-in-out;
 }
-
+.homepage.hamburger-icon span {
+  @apply border-a-pink;
+}
 .hamburger-icon.open span,
 .hamburger-icon:hover span {
   @apply w-full;
@@ -277,6 +279,9 @@
   background-position: 50%;
   background-size: 150px;
   will-change: transform;
+}
+.hub .NoiseBackground__Noise:after {
+  background-image: url(/noise2.png);
 }
 @media (min-width: 1200px) {
   .NoiseBackground__Noise:after {

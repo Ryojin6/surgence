@@ -19,7 +19,7 @@ module.exports = {
       colors: {
         a: {
           pink: '#f14b72',
-          charcoal: '#1f2223',
+          charcoal: '#121212',
           green: '#00ff00',
           orange: '#fbd23b',
           blue: '#00ffff',

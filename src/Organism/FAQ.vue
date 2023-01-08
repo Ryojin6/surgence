@@ -1,22 +1,13 @@
 <template>
-  <AtomSection
-    v-aos
-    tp="large"
-    bp="large"
-    class="relative bg-a-pink font-mono font-bold text-a-navy"
-  >
-    <AtomInner>
-      <AtomAnimate class="mb-16">
-        <h2 class="textXLarge pb-16 text-center !font-mono2">FAQ</h2>
-        <MoleculeAccordionCard
-          v-for="item in faq"
-          :key="item.id"
-          :title="item.title"
-          :description="item.description"
-        />
-      </AtomAnimate>
-    </AtomInner>
-  </AtomSection>
+  <AtomAnimate class="grid w-full grid-cols-2 gap-10">
+    <MoleculeAccordionCard
+      class="w-full"
+      v-for="item in faq"
+      :key="item.id"
+      :title="item.title"
+      :description="item.description"
+    />
+  </AtomAnimate>
 </template>
 
 <script>
@@ -25,21 +16,41 @@ export default {
     return {
       faq: [
         {
-          title: 'How Many MochiMo’s Will There Be?',
-          description: `4444 Mochi’s entering the ethereum blockchain!`,
+          title: 'SOCIAL MEDIA MARKETING',
+          description: `Surgence can manage your social media 
+          accounts to post tweets, interact with the community, 
+          and perform inbound/outbound messaging. We will help you
+           grow your audience and communicate your value proposition.`,
         },
         {
-          title: 'When Is the Mint for MochiMo?',
-          description: `Towards the end of October!`,
+          title: 'FRONT END BACK END DEVELOPMENT',
+          description: `Thousands of people will be visiting your website at once. 
+          Your website should be beautiful, secure, and resilient. Surgence will build 
+          dynamic and robust websites to help vou stand out and efficient minting contracts.`,
         },
         {
-          title: 'How Much Will My MochiMo Be?',
-          description: `222 VIP Free Mochi’s & 4222 Mochi’s for .01Ξ`,
+          title: 'COLLABORATION PARTNERSHIPS',
+          description: `Surgence will leverage our existing network of partners to helo vou 
+          secure collaborations and partnershios with established NFT communities from dav 1. 
+          We will put vour proiect in front of 100,000s of investors.`,
         },
         {
-          title: 'What Smart Contract Are The Mochi’s Being Minted On?',
-          description: `We are using the ERC-721 smart-contract for everyone 
-          in our amazing community to get a Mochi of their own!`,
+          title: 'DISCORD DEVELOPMENT',
+          description: `Surgence can help to build your ideal discord community platform 
+          with bot configurations, utilities, and seamless user journeys that align with the
+           brand.`,
+        },
+        {
+          title: 'COMMUNITY MANAGEMENT',
+          description: `Surgence will mobilise a team of community managers and moderators to help 
+          run our Discord flawlessly. The key objective would be focused on community growth and 
+          engagement while ensuring a quality communitv experience to increase conversions.`,
+        },
+        {
+          title: 'STRATEGIC GUIDANCE',
+          description: `Our community consists of marketers performing multiple sell-outs, web3 
+          leaders, and reputable advisors. Contact us for elite advice and strategic guidance 
+          that can set your project on the path to success..`,
         },
       ],
     };

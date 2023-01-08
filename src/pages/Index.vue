@@ -1,5 +1,8 @@
 <template>
-  <TemplateDefault class="mx-auto max-w-8xl overflow-x-hidden bg-white">
+  <TemplateDefault
+    class="mx-auto max-w-8xl overflow-x-hidden bg-white"
+    homepage
+  >
     <div class="NoiseBackground !z-10">
       <div class="NoiseBackground__Noise" />
     </div>
@@ -49,13 +52,15 @@
         <AtomAnimate
           class="textLarge font-sans text-3xl font-bold uppercase sm:text-4xl md:text-6xl 2xl:text-7xl"
         >
-          We worked hard to become
-          <span
-            class="textXLarge my-2 inline-block bg-a-blue p-1 text-a-charcoal"
-          >
-            THE BEST</span
-          >
-          WEB3 Talent Hub
+          <h1>
+            We worked hard to become
+            <span
+              class="textXLarge my-2 inline-block bg-a-blue p-1 text-a-charcoal"
+            >
+              THE BEST</span
+            >
+            WEB3 Talent Hub
+          </h1>
         </AtomAnimate>
 
         <div
@@ -67,7 +72,7 @@
         </div>
       </div>
     </AtomSection>
-    <AtomSection tp="large" bp="large" class="">
+    <AtomSection tp="large" bp="large" class="" id="about">
       <div class="mx-auto max-w-7xl space-y-24 md:space-y-64">
         <div
           class="flex flex-col items-center space-y-6 md:flex-row md:space-y-0 md:space-x-10 xl:space-x-20"
@@ -81,8 +86,8 @@
             <div
               class="pin-center absolute whitespace-nowrap text-left font-title text-5xl font-extrabold uppercase md:text-6xl xl:text-7xl"
             >
-              Who <br />
-              We Are
+              Our <br />
+              Mission
             </div>
           </AtomAnimate>
           <AtomAnimate class="textMedium font-sans md:w-2/3">
@@ -103,8 +108,7 @@
             <div
               class="pin-center absolute whitespace-nowrap text-left font-title text-5xl font-extrabold uppercase md:text-6xl xl:text-7xl"
             >
-              What <br />
-              We Do
+              Our <br />Vision
             </div>
           </AtomAnimate>
           <AtomAnimate class="textMedium md:w-2/3">
@@ -133,6 +137,7 @@
       tp="small"
       bp="small"
       class="relative transition-all duration-1000 ease-in-out"
+      id="community"
     >
       <AtomInner class="md:py-32">
         <MoleculeTitle title="The Go-to Web3 Hub For" />
@@ -227,7 +232,7 @@
         </span>
       </marquee>
     </div>
-    <AtomSection tp="large" bp="large" class="">
+    <AtomSection tp="large" bp="large" class="" id="what-we-do">
       <div class="mx-auto max-w-7xl">
         <div
           v-for="(item, index) in whatWeDo"
@@ -259,7 +264,12 @@
       </div>
     </AtomSection>
 
-    <AtomSection class="relative overflow-hidden" tp="large" bp="large">
+    <AtomSection
+      class="relative overflow-hidden"
+      tp="large"
+      bp="large"
+      id="advisory-services"
+    >
       <MoleculeTitle title="Advisory Services" />
       <div
         class="mx-auto flex w-full max-w-8xl flex-col flex-wrap justify-center py-10 md:flex-row"
@@ -302,6 +312,12 @@
 import { VueTyper } from '~/vue-typer';
 
 export default {
+  props: {
+    homepage: {
+      type: Boolean,
+      default: false,
+    },
+  },
   components: {
     VueTyper,
   },

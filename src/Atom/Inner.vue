@@ -1,7 +1,7 @@
 <template>
   <div
     class="mx-auto w-full flex-shrink-0"
-    :class="{ 'max-w-7xl': !fullWidth }"
+    :class="{ 'max-w-8xl': !fullWidth }"
   >
     <slot />
   </div>

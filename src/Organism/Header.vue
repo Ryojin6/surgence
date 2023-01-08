@@ -1,13 +1,13 @@
 <template>
   <header
-    class="custom-transition fixed inset-x-0 z-40 flex w-full flex-shrink-0 items-center justify-between px-3 py-4 scrolled:bg-a-charcoal lg:px-10"
-    :class="[{ open: toggled }]"
+    class="custom-transition fixed inset-x-0 z-40 flex w-full flex-shrink-0 items-center justify-between border-black px-3 py-4 scrolled:bg-a-charcoal lg:px-10"
+    :class="[{ open: toggled }, { 'border-b-2': !homepage }]"
   >
     <g-link
       to="/"
-      class="w-16 transition-all duration-300 ease-in-out scrolled:w-12 xl:w-16 2xl:w-20 2xl:scrolled:w-16"
+      class="w-16 text-white transition-all duration-300 ease-in-out scrolled:w-12 xl:w-16 2xl:w-20 2xl:scrolled:w-16"
     >
-      <g-image src="~/images/Logo2.png" immediate alt="" class="w-full" />
+      <AtomBrand :homepage="homepage" />
     </g-link>
 
     <div class="relative z-40 flex flex-1 justify-end space-x-2 md:space-x-6">
@@ -29,29 +29,34 @@
       </div>
 
       <button class="focus:outline-none block" @click="toggled = !toggled">
-        <AtomIconHamburger :class="{ open: toggled }" />
+        <AtomIconHamburger :class="[{ open: toggled }, 'homepage']" />
       </button>
     </div>
     <nav>
       <ul class="menu">
         <AtomMenuItem
-          title="Lorem Ipsum"
-          anchor="#"
+          title="About"
+          anchor="#about"
           @toggled="toggled = false"
         />
         <AtomMenuItem
-          title="Lorem Ipsum"
-          anchor="#"
+          title="Community"
+          anchor="#community"
           @toggled="toggled = false"
         />
         <AtomMenuItem
-          title="Lorem Ipsum"
-          anchor="#s"
+          title="What We Do"
+          anchor="#what-we-do"
           @toggled="toggled = false"
         />
         <AtomMenuItem
-          title="Lorem ipsum"
-          anchor="#"
+          title="Advisory Services"
+          anchor="#advisory-services"
+          @toggled="toggled = false"
+        />
+        <AtomMenuItem
+          title="Contact"
+          anchor="#contact"
           @toggled="toggled = false"
         />
       </ul>
@@ -61,6 +66,12 @@
 
 <script>
 export default {
+  props: {
+    homepage: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       toggled: false,

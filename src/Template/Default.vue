@@ -5,7 +5,7 @@
     </a>
     <AtomIeBanner />
     <div class="">
-      <OrganismHeader />
+      <OrganismHeader :homepage="homepage" />
       <div id="content" />
       <slot />
       <OrganismFooter />
@@ -15,6 +15,12 @@
 
 <script>
 export default {
+  props: {
+    homepage: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       elementVisible: true,

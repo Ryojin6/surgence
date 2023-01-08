@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburger-icon h-6 relative w-8">
+  <div class="hamburger-icon relative h-6 w-8">
     <span />
     <span />
     <span />

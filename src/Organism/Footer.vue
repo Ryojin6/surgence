@@ -1,5 +1,6 @@
 <template>
   <AtomSection
+    id="contact"
     tp="large"
     bp="large"
     class="flex max-h-[1200px] min-h-screen flex-col items-center justify-center"
@@ -53,12 +54,12 @@
     </div>
   </AtomSection>
 </template>
-<style scoped>
+<style>
 .glitch {
-  color: white;
-  font-size: 100px;
+  @apply text-a-blue;
+
   position: relative;
-  width: 400px;
+
   margin: 0 auto;
 }
 
@@ -133,7 +134,7 @@
   left: 2px;
   text-shadow: -1px 0 red;
   top: 0;
-  color: white;
+  @apply text-a-blue;
   background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
@@ -211,7 +212,7 @@
   left: -2px;
   text-shadow: 1px 0 blue;
   top: 0;
-  color: white;
+  @apply text-a-blue;
   background: black;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);

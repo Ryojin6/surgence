@@ -1,11 +1,11 @@
 <template>
   <li
     v-scroll-to="anchor"
-    class="nav-item w-96 py-4 font-mono text-3xl font-bold uppercase leading-none text-[#00ffff] hover:cursor-pointer md:text-4xl xl:text-5xl 2xl:text-6xl"
+    class="nav-item py-4 font-mono text-3xl font-bold uppercase leading-none text-a-blue hover:cursor-pointer hover:text-a-pink md:text-4xl xl:text-5xl 2xl:text-6xl"
     :data-text="title"
     @click="closeMenu"
   >
-    Lorem
+    {{ title }}
   </li>
 </template>
 

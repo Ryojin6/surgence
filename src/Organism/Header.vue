@@ -16,15 +16,15 @@
       >
         <AtomIconTwitter
           link="#"
-          class="hidden w-8 hover:text-white md:block"
+          class="hidden w-8 text-a-pink hover:text-a-blue md:block"
         />
         <AtomIconDiscord
           link="#"
-          class="hidden w-8 hover:text-white md:block"
+          class="hidden w-8 text-a-pink hover:text-a-blue md:block"
         />
         <AtomIconLinkedin
           link="#"
-          class="hidden w-8 hover:text-white md:block"
+          class="hidden w-8 text-a-pink hover:text-a-blue md:block"
         />
       </div>
 

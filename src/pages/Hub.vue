@@ -39,38 +39,119 @@
       <AtomInner
         class="flex w-full flex-col items-center justify-center space-y-10"
       >
-        <div class="textLarge mx-auto max-w-5xl pb-10 text-center font-bold">
+        <AtomAnimate
+          class="textLarge mx-auto max-w-5xl pb-10 text-center font-bold"
+        >
           Surgence Advisory's vision is to help the biggest web2 and web3 brands
           achieve business success within this increasingly competitive market
           by leveraging our years of web3 experience and powerful networks.
-        </div>
+        </AtomAnimate>
 
         <OrganismFAQ />
       </AtomInner>
     </AtomSection>
-    <AtomSection
-      tp="large"
-      bp="large"
-      class="bg-a-charcoal text-center text-white"
-    >
-      <AtomInner
-        class="flex w-full flex-col items-center justify-center space-y-10"
-      >
-        <div class="textXLarge mx-auto max-w-5xl pb-10 text-center font-bold">
-          WE WORKED HARD TO BECOME THE SPACES BEST WEB3 TALENT HUB
-        </div>
-      </AtomInner>
-    </AtomSection>
+
     <AtomSection tp="large" bp="large">
       <MoleculeTitle title="STRATEGIC PARTNERS" />
-      <AtomInner
-        class="flex w-full flex-col items-center justify-center space-y-10"
+      <div
+        class="mx-auto flex w-full max-w-6xl flex-col items-center justify-center space-y-10"
       >
-        <div class="textLarge mx-auto max-w-5xl pb-10 text-center font-bold">
+        <AtomAnimate class="textLarge mx-auto max-w-5xl pb-14 text-center">
           Surgence Advisory's vision is to help the biggest web2 and web3 brands
           achieve business success within this increasingly competitive market
           by leveraging our years of web3 experience and powerful networks.
+        </AtomAnimate>
+        <div
+          class="flex flex-col items-center space-y-6 py-14 md:flex-row md:space-y-0"
+        >
+          <AtomAnimate class="relative text-center md:w-1/3">
+            <div
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+            >
+              01
+            </div>
+          </AtomAnimate>
+          <AtomAnimate
+            class="!font-title text-4xl font-bold md:w-2/3 xl:text-5xl"
+          >
+            WE WORKED HARD TO BECOME THE SPACES BEST WEB3 TALENT HUB
+          </AtomAnimate>
         </div>
+        <div
+          class="flex flex-col items-center space-y-6 py-14 md:flex-row md:space-y-0"
+        >
+          <AtomAnimate class="relative text-center md:w-1/3">
+            <div
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+            >
+              02
+            </div>
+          </AtomAnimate>
+          <AtomAnimate
+            class="!font-title text-4xl font-bold md:w-2/3 xl:text-5xl"
+          >
+            OUR TEAMS HAVE LED SELL -OUT PROJECTS, SUCCESSFUL STARTUPS, AND
+            COVER A VARIETY OF ROLES
+          </AtomAnimate>
+        </div>
+        <div
+          class="flex flex-col items-center space-y-6 py-14 md:flex-row md:space-y-0"
+        >
+          <AtomAnimate class="relative text-center md:w-1/3">
+            <div
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+            >
+              03
+            </div>
+          </AtomAnimate>
+          <AtomAnimate
+            class="!font-title text-4xl font-bold md:w-2/3 xl:text-5xl"
+          >
+            WE ARE SELECTIVE WITH WHO WE WORK WITH AND EMPHASIS LONG-LASTING
+            CLIENT RELATIONSHIPS
+          </AtomAnimate>
+        </div>
+      </div>
+    </AtomSection>
+    <AtomSection tp="large" bp="large">
+      <MoleculeTitle title="WHO WE'RE CONNECTED WITH" />
+      <AtomInner
+        class="flex w-full flex-col items-center justify-center space-y-10"
+      >
+        <AtomAnimate
+          class="textLarge mx-auto max-w-5xl pb-10 text-center font-bold"
+        >
+          We have collaborated with over 1,000 projects. We have existing
+          connections with all the best projects in the Alpha, P2E, PFP, and
+          other niches to help you create tailored marketing strategies.
+        </AtomAnimate>
+
+        <AtomAnimate class="flex w-full flex-wrap items-center justify-center">
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/1.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/2.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/3.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/4.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/5.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/6.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/7.png" alt="" class="" />
+          </div>
+          <div class="flex w-1/2 justify-center p-4 md:w-1/3 xl:w-1/4">
+            <img src="/partners/8.png" alt="" class="" />
+          </div>
+        </AtomAnimate>
       </AtomInner>
     </AtomSection>
   </TemplateDefault>
@@ -151,8 +232,8 @@ projects. Click here to find out more.`,
         },
         {
           title: 'TRADERS',
-          description: `Surgence runs daily trading sessions, gives members access to trading tools, 
-          and allowlist giveaways to the best projects in web3`,
+          description: `Surgence runs daily trading sessions, gives members access to 
+          trading tools, and allowlist giveaways to the best projects in web3`,
         },
       ],
     };

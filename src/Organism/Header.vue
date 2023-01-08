@@ -1,7 +1,7 @@
 <template>
   <header
     class="custom-transition fixed inset-x-0 z-40 flex w-full flex-shrink-0 items-center justify-between border-black px-3 py-4 scrolled:bg-a-charcoal lg:px-10"
-    :class="[{ open: toggled }, { 'border-b-2': !homepage }]"
+    :class="[{ open: toggled }, { 'border-b-8': !homepage }]"
   >
     <g-link
       to="/"

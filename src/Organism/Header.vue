@@ -35,28 +35,33 @@
     <nav>
       <ul class="menu">
         <AtomMenuItem
+          title="The Hub"
+          anchor="/hub"
+          @toggled="toggled = false"
+        />
+        <AtomMenuItem
           title="About"
-          anchor="#about"
+          anchor="/#about"
           @toggled="toggled = false"
         />
         <AtomMenuItem
           title="Community"
-          anchor="#community"
+          anchor="/#community"
           @toggled="toggled = false"
         />
         <AtomMenuItem
           title="What We Do"
-          anchor="#what-we-do"
+          anchor="/#what-we-do"
           @toggled="toggled = false"
         />
         <AtomMenuItem
           title="Advisory Services"
-          anchor="#advisory-services"
+          anchor="/#advisory-services"
           @toggled="toggled = false"
         />
         <AtomMenuItem
           title="Contact"
-          anchor="#contact"
+          anchor="/#contact"
           @toggled="toggled = false"
         />
       </ul>
@@ -115,19 +120,19 @@ ul.menu {
   perspective: 1000;
 }
 
-ul.menu li {
+ul.menu a {
   @apply text-center opacity-0;
   transform: translate3d(0, 36px, 0);
 }
 
-ul.menu li:before {
+ul.menu a:before {
   content: '';
   @apply absolute inset-0 left-auto m-auto h-full w-0 overflow-hidden bg-white;
 
   transition: width 0.14s ease-out;
 }
 
-ul.menu li:after {
+ul.menu a:after {
   @apply absolute right-0 left-0 bottom-0 m-auto overflow-hidden text-gray-800 opacity-0;
 
   content: attr(data-text);
@@ -136,54 +141,54 @@ ul.menu li:after {
   transition: transform 0.1s ease-out, opacity 0.1s ease-out;
 }
 
-.open ul.menu li {
+.open ul.menu a {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-.open ul.menu li:nth-child(1) {
+.open ul.menu a:nth-child(1) {
   transition-delay: 0.75s;
 }
 
-.open ul.menu li:nth-child(2) {
+.open ul.menu a:nth-child(2) {
   transition-delay: 0.85s;
 }
 
-.open ul.menu li:nth-child(3) {
+.open ul.menu a:nth-child(3) {
   transition-delay: 0.95s;
 }
 
-.open ul.menu li:nth-child(4) {
+.open ul.menu a:nth-child(4) {
   transition-delay: 1.05s;
 }
 
-.open ul.menu li:nth-child(5) {
+.open ul.menu a:nth-child(5) {
   transition-delay: 1.15s;
 }
 
-.open ul.menu li:nth-child(6) {
+.open ul.menu a:nth-child(6) {
   transition-delay: 1.25s;
 }
 
-.open ul.menu li:nth-child(7) {
+.open ul.menu a:nth-child(7) {
   transition-delay: 1.35s;
 }
 
-.open ul.menu li:nth-child(8) {
+.open ul.menu a:nth-child(8) {
   transition-delay: 1.45s;
 }
 
-.open ul.menu li:nth-child(9) {
+.open ul.menu a:nth-child(9) {
   transition-delay: 1.55s;
 }
-.open ul.menu li:nth-child(10) {
+.open ul.menu a:nth-child(10) {
   transition-delay: 1.65s;
 }
-.open ul.menu li:nth-child(11) {
+.open ul.menu a:nth-child(11) {
   transition-delay: 1.75s;
 }
-.open ul.menu li:nth-child(12) {
+.open ul.menu a:nth-child(12) {
   transition-delay: 1.85s;
 }
 

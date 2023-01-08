@@ -33,7 +33,7 @@
       </button>
     </div>
     <nav>
-      <ul class="menu">
+      <ul class="menu flex flex-col items-center justify-center text-center">
         <AtomMenuItem
           title="The Hub"
           anchor="/hub"

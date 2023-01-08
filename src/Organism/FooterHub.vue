@@ -3,28 +3,26 @@
     id="contact"
     tp="large"
     bp="large"
-    class="flex max-h-[1200px] min-h-screen flex-col items-center justify-center"
+    class="flex flex-col items-center justify-center"
   >
     <AtomInner>
-      <div class="py-16 xl:py-32">
+      <div class="">
         <div
-          class="mx-auto max-w-3xl pb-32 text-center text-6xl font-bold uppercase md:text-7xl xl:pb-52 xl:text-8xl"
+          class="mx-auto max-w-5xl text-center text-6xl font-bold uppercase md:text-7xl xl:text-8xl"
         >
-          Let's Talk About THe NExt
-          <span class="glitch text-a-blue" data-text="BIG">BIG</span>
-          Thing
+          WORK WITH US AND CUT THROUGH THE NOISE IN WEB3
         </div>
 
         <div class="grid gap-10 py-10 md:grid-cols-2 md:gap-20">
           <a
             href="#"
-            class="textMedium custom-transition rounded-full border border-white px-10 py-6 text-center text-white hover:bg-a-blue hover:text-a-charcoal"
+            class="textMedium custom-transition rounded-full border border-a-charcoal px-10 py-6 text-center text-a-charcoal hover:bg-a-blue hover:text-a-charcoal"
           >
             Discord
           </a>
           <a
             href="#"
-            class="textMedium custom-transition rounded-full border border-white px-10 py-6 text-center text-white hover:bg-a-blue hover:text-a-charcoal"
+            class="textMedium custom-transition rounded-full border border-a-charcoal px-10 py-6 text-center text-a-charcoal hover:bg-a-blue hover:text-a-charcoal"
           >
             Twitter
           </a>

@@ -66,7 +66,7 @@
         >
           <AtomAnimate class="relative text-center md:w-1/3">
             <div
-              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem]"
             >
               01
             </div>
@@ -82,7 +82,7 @@
         >
           <AtomAnimate class="relative text-center md:w-1/3">
             <div
-              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem]"
             >
               02
             </div>
@@ -99,7 +99,7 @@
         >
           <AtomAnimate class="relative text-center md:w-1/3">
             <div
-              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem] 2xl:text-[25rem]"
+              class="font-title text-[15rem] font-extrabold text-a-charcoal opacity-10 shadow-2xl md:pb-0 md:text-[18rem]"
             >
               03
             </div>

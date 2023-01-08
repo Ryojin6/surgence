@@ -8,7 +8,8 @@
       <OrganismHeader :homepage="homepage" />
       <div id="content" />
       <slot />
-      <OrganismFooter />
+      <OrganismFooter v-if="homepage" />
+      <OrganismFooterHub v-else />
     </div>
   </div>
 </template>
